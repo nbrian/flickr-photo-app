@@ -1,0 +1,17 @@
+.results{
+  background-color: #C5C5C5;
+  margin: 20px 0;
+  padding: 15px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+  img {
+    margin-bottom: 12px;
+    -webkit-transition: .3s ease-in-out;
+	  transition: .3s ease-in-out;
+  }
+  img:hover {
+    opacity: .5;
+  }
+}

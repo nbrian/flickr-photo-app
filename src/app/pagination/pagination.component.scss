@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pages {
+    margin-right: 12px;
+  }
+}

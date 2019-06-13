@@ -1,0 +1,14 @@
+<div class="photo-details" *ngIf="!!details">
+  <div class="photo-header">
+    <button class="action" (click)="back()">Back</button>
+    <h3 class="title">{{!!details.title ? 'Title: ' + details.title : ''}}</h3>
+  </div>
+  <div class="photo-container">
+    <img [src]="imgSrc">
+    <div class="details">
+      <div class="detail-title">Description:</div> <div class="detail-text">{{details.description}}</div>
+      <div class="detail-title">Tags: </div> <div class="detail-text">{{details.tags.join(', ')}}</div>
+    </div>
+  </div>
+  
+</div>

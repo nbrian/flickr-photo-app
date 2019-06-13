@@ -1,0 +1,10 @@
+<div>
+  <form [formGroup]="searchForm" (ngSubmit)="submit(page)">
+    <input type="text" name="searchbox" formControlName="search" required>
+    <input type="submit" value="Search" [disabled]="!searchForm.valid || searching">
+  </form>
+  <div class="results" *ngIf="!!photos">
+    <img *ngFor="let photo of photos" [routerLink]="photo.id" [src]="getThumbnail(photo)">
+  </div>
+  <pagination [currentPage]="page" [pages]="pages" (searchEvent)="submit($event)"></pagination>
+</div>

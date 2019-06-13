@@ -1,0 +1,13 @@
+<div class="pagination" *ngIf="!!pages">
+  <div *ngIf="currentPage > 1">
+    <button (click)="navigatePage(1)"> First </button>
+    <button (click)="navigatePage(currentPage - 1)"> Previous </button>
+    &nbsp; &nbsp;
+  </div>
+  <div class="pages"> Page {{currentPage}} of {{pages}} </div>
+  <div *ngIf="currentPage < pages">
+    &nbsp; &nbsp;
+    <button (click)="navigatePage(currentPage + 1)"> Next </button> 
+    <button (click)="navigatePage(pages)"> Last </button> 
+  </div>
+</div>
